@@ -4,16 +4,18 @@
     <title>WEB ENDPOINT</title>
     <script>
     const hash = new URLSearchParams(window.location.search).get('hash');
-    alert('HASH: ' + hash)
+    // alert('HASH: ' + hash)
 
     // Your app custom scheme
     // const schemeUrl = `weatherapp://register?trip_id=${tripId}&token=${token}`;
     // const scheme_url = `lap2go://`;
-    // const scheme_url = `encontrao_vda://${hash}`;
-    const scheme_url = `encontrao_vda://ZTc1YWJiNzQtN2IxMy00NzkwLTliYmItYzIyZjVhMTViNmQw`;
+    const scheme_url = `encontrao_vda://${hash}`;
+    // const scheme_url = `encontrao_vda://ZTc1YWJiNzQtN2IxMy00NzkwLTliYmItYzIyZjVhMTViNmQw`;
 
     // Try opening the app
     window.location = scheme_url;
+
+    alert('Trying to open scheme_url: ', scheme_url);
 
     // After 2 seconds, if app didn't open, redirect to Play Store
     setTimeout(() => {
