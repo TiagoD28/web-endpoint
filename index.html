@@ -3,12 +3,14 @@
 <head>
     <title>WEB ENDPOINT</title>
     <script>
-    const tripId = new URLSearchParams(window.location.search).get('trip_id');
-    const token = new URLSearchParams(window.location.search).get('token');
+    const hash = new URLSearchParams(window.location.search).get('hash');
+    alert('HASH: ' + hash)
 
     // Your app custom scheme
     // const schemeUrl = `weatherapp://register?trip_id=${tripId}&token=${token}`;
-    const scheme_url = `lap2go://`;
+    // const scheme_url = `lap2go://`;
+    // const scheme_url = `encontrao_vda://${hash}`;
+    const scheme_url = `encontrao_vda://ZTc1YWJiNzQtN2IxMy00NzkwLTliYmItYzIyZjVhMTViNmQw`;
 
     // Try opening the app
     window.location = scheme_url;
